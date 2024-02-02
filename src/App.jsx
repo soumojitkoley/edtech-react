@@ -10,8 +10,8 @@ import AfterLogin from './components/AfterLogin';
 import Logout from './components/Logout';
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
-import { toast, Zoom, Slide } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast from 'react-hot-toast';
+
 
 function App() {
 
@@ -19,19 +19,13 @@ function App() {
   const [afterLoginButtonsVisible, setafterLoginButtonsVisible] = useState(false);
 
   function loginClickHandler(event) {
-    event.preventDefault();
-    toast.success('Logged in', {
-      position: "top-center",
-      autoClose: 1000,
-      progress: undefined,
-      transition: Slide,
-      theme: "#242424",
-      });
+    toast.success('Logged in')
     setbeforeLoginButtonsVisible(false)
     setafterLoginButtonsVisible(true);
   }
 
   function logoutClickHandler() {
+    toast.success('Logged out')
     setbeforeLoginButtonsVisible(true)
     setafterLoginButtonsVisible(false)
   }
@@ -50,6 +44,7 @@ function App() {
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/after-login' element={<AfterLogin/>}/>
           <Route path='/logout' element={<Logout/>}/>
+          {/* <Route path='*' element={<div>error</div>}/> */}
         </Route>
       </Routes>
     </div>

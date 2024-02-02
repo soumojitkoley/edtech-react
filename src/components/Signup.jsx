@@ -31,7 +31,7 @@ const Signup = (props) => {
           </div>
           <span className="span">Forgot password?</span>
         </div>
-        <button onClick={props.loginClickHandler} className="button-submit"><NavLink className='login-navlink' to='/after-login'>Login</NavLink></button>
+        <button onClick={props.loginClickHandler} className="button-submit"><NavLink className='login-navlink' to='/after-login'>Sign up</NavLink></button>
         <p className="p">Already have an account? <span className="span"><NavLink className='signup-navlink' to='/login'>Login</NavLink></span></p>
         {/* <p className="p line">Or With</p> */}
 

@@ -1,9 +1,10 @@
-*,
-*::after,
-*::before{
+*{
   margin:0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #242424;
   font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #242424;
 }
