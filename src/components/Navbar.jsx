@@ -2,7 +2,8 @@ import React from 'react';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = (props) => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -32,7 +33,16 @@ const Navbar = (props) => {
             </label>
           </div>
 
+          <AnimatePresence>
           {isMenuOpen && (
+            <motion.div
+            className="fullnav-mob"
+            data-visible="true"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: '0%' }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            >
             <div key={isMenuOpen ? 'menu-open' : 'menu-closed'} className={'fullnav-mob'} data-visible="true">
               <div className="nav-menu">
                 <ul type="none" className="list">
@@ -89,7 +99,9 @@ const Navbar = (props) => {
                 </div>
               </div>
             </div>
+            </motion.div>
           )}
+          </AnimatePresence>
         </div>
       ) : (
         <>
