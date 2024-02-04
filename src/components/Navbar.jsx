@@ -33,7 +33,7 @@ const Navbar = (props) => {
           </div>
 
           {isMenuOpen && (
-            <div className={'fullnav-mob'}>
+            <div key={isMenuOpen ? 'menu-open' : 'menu-closed'} className={'fullnav-mob'} data-visible="true">
               <div className="nav-menu">
                 <ul type="none" className="list">
                   <li>
