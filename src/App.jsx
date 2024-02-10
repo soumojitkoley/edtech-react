@@ -44,7 +44,7 @@ function App() {
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/after-login' element={<AfterLogin/>}/>
           <Route path='/logout' element={<Logout/>}/>
-          {/* <Route path='*' element={<div>error</div>}/> */}
+          <Route path='*' element={<div>error</div>}/>
         </Route>
       </Routes>
     </div>
