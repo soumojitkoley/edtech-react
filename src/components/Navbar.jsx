@@ -35,15 +35,12 @@ const Navbar = (props) => {
 
           <AnimatePresence>
           {isMenuOpen && (
-            <motion.div
-            className="fullnav-mob"
-            data-visible="true"
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: '0%' }}
-            exit={{ opacity: 0, x: '100%' }}
+            <motion.div key={isMenuOpen ? 'menu-open' : 'menu-closed'} className={'fullnav-mob'} data-visible="true"
+            initial={{ opacity: 0, width : 0 }}
+            animate={{ opacity: 1, width: '70vw' }}
+            exit={{ opacity: 0, width: 0 }}
             transition={{ duration: 0.3 }}
             >
-            <div key={isMenuOpen ? 'menu-open' : 'menu-closed'} className={'fullnav-mob'} data-visible="true">
               <div className="nav-menu">
                 <ul type="none" className="list">
                   <li>
@@ -98,7 +95,6 @@ const Navbar = (props) => {
                   )}
                 </div>
               </div>
-            </div>
             </motion.div>
           )}
           </AnimatePresence>

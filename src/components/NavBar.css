@@ -19,20 +19,25 @@
   width: 100%;
 }
 
+.hello{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
 .fullnav-mob {
   position: absolute;
   top: 2.9em;
   right: 0;
   display: flex;
   flex-direction: column;
-  justify-content:start;
+  justify-content:left;
   align-items: center;
   text-align: center;
   background-color: #242424;
   padding: 20px 0px;
   gap:10px;
-  height: 100vh;
-  width: 70vw;
+  height: 92.5vh;
 }
 
 
@@ -141,6 +146,7 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
+    margin-top: 5em;
   }
 
 
