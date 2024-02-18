@@ -10,7 +10,6 @@ const Navbar = (props) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    console.log('Menu toggled');
     setMenuOpen(!isMenuOpen);
   };
   
